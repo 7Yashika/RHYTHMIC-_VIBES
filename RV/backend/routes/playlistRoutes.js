@@ -26,7 +26,7 @@ router.route('/:id')
   .delete(deletePlaylist);
 
 // Song management routes
-router.route('/:id/songs')
+router.route('/:id/add')
   .post(addSong);
 
 router.route('/:id/songs/:songNodeId')
