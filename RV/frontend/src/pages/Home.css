@@ -1,0 +1,118 @@
+/* Home container with music-themed background */
+.home-container {
+  text-align: center;
+  padding: 2rem;
+  background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay for contrast */
+.home-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(15, 15, 15, 0.85);
+  z-index: 0;
+}
+
+/* Content sits above overlay */
+.home-container > * {
+  position: relative;
+  z-index: 1;
+  color: #f3f4f6;
+}
+
+/* Title */
+.home-title {
+  font-size: 3rem;
+  color: #60a5fa;
+  margin-bottom: 0.5rem;
+}
+
+/* Tagline */
+.home-tagline {
+  font-size: 1.5rem;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+}
+
+/* Welcome message */
+.home-welcome {
+  font-size: 1.2rem;
+  color: #34d399;
+  margin-bottom: 1rem;
+}
+
+/* Description */
+.home-description {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  max-width: 700px;
+}
+
+/* Navigation */
+.home-nav {
+  margin: 2rem 0;
+}
+
+/* Links */
+.home-link {
+  display: inline-block;
+  margin: 0.5rem;
+  color: #93c5fd;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.home-link:hover {
+  color: #60a5fa;
+}
+
+/* Features section */
+.home-features {
+  text-align: left;
+  margin: 2rem auto;
+  max-width: 600px;
+  background: rgba(28, 28, 28, 0.8);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.home-features h3 {
+  color: #f9fafb;
+  margin-bottom: 1rem;
+}
+
+.home-features ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.home-features li {
+  background: #374151;
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: #e5e7eb;
+}
+
+/* Footer */
+.home-footer {
+  margin-top: 4rem;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  text-align: center;
+}

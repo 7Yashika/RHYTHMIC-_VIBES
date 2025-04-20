@@ -1,0 +1,101 @@
+/* Background setup */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    position: relative;
+  }
+  
+  /* Dark overlay for contrast */
+  .auth-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(15, 15, 15, 0.85);
+    z-index: 0;
+  }
+  
+  /* Form styling */
+  .auth-form {
+    position: relative;
+    z-index: 1;
+    background: rgba(28, 28, 28, 0.85);
+    padding: 2.5rem 3.5rem;
+    border-radius: 16px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.8s ease-in;
+  }
+  
+  .auth-form h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+  }
+  
+  .auth-form input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background: #2a2a2a;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.2s;
+  }
+  
+  .auth-form input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ff5c5c66;
+    background-color: #333;
+  }
+  
+  .auth-form button {
+    padding: 0.75rem;
+    background-color: #ff5c5c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .auth-form button:hover {
+    background-color: #ff3838;
+    transform: scale(1.02);
+  }
+  
+  .auth-form p {
+    text-align: center;
+    color: #ccc;
+    font-size: 0.95rem;
+  }
+  
+  .auth-form .error {
+    color: #ff5c5c;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

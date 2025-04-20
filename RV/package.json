@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "axios": "^1.8.4",
+    "react-h5-audio-player": "^3.10.0-rc.1"
+  }
+}
