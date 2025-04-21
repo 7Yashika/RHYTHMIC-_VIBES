@@ -43,8 +43,8 @@ const Home = () => {
         <nav style={styles.nav}>
           {token ? (
             <>
-              <Link to="/my" style={styles.link}>My Playlists</Link>
-              <Link to="/create-playlist" style={styles.link}>Create Playlist</Link>
+              
+              <Link to="/create-playlist" style={styles.link}>Playlist</Link>
               <Link to="/jamendo" style={styles.link}>Discover Music</Link>
             </>
           ) : (

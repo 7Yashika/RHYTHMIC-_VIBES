@@ -26,7 +26,6 @@ import Register from './pages/Register';
 import Home from './pages/Home';
 import { AuthProvider, AuthContext } from './context/AuthContext';
 import JamendoPlayer from "./pages/JamendoPlayer"; 
-import MyPlaylists from "./pages/MyPlaylists";
 import CreatePlaylist from "./pages/Playlist";
 import ViewPublicPlaylists from "./pages/ViewPublicPlaylists";
 function App() {
@@ -41,7 +40,6 @@ function App() {
           <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path="/jamendo" element={<JamendoPlayer />} /> {/* New route */}
           <Route path="/create-playlist" element={<CreatePlaylist />} />
-          <Route path="/my" element={<MyPlaylists />} />
           <Route path="/public-playlists" element={<ViewPublicPlaylists />} />
         </Routes>
         
