@@ -18,6 +18,7 @@ const songRoutes = require('./routes/songRoutes');
 const favoriteRoutes = require('./routes/favoriteRoutes');
 // const adminRoutes = require('./routes/');
 const tagRoutes = require('./routes/tagRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 // const playerRoutes = require("./routes/playerRoutes");
 // Initialize Express app
 const app = express();
@@ -54,6 +55,7 @@ app.use("/api/playlists", playlistRoutes);
 // app.use('/api/admin', adminRoutes);
 app.use('/api/tags', tagRoutes);
 app.use('/api/jamendo', require('./routes/jamendoRoutes'));
+app.use('/api/admin', require('./routes/adminRoutes'));
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);

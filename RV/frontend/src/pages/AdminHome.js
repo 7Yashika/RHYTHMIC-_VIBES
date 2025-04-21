@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Home = () => {
+const Admin_Home = () => {
   const token = localStorage.getItem("token");
   const username = localStorage.getItem("username");
   const navigate = useNavigate();
@@ -32,19 +32,19 @@ const Home = () => {
 
       <div style={styles.content}>
         <h1 style={styles.title}>🎶 Rhythmic Vibes</h1>
-        <h2 style={styles.tagline}>Feel the Beat. Curate Your Vibe.</h2>
+        <h2 style={styles.tagline}></h2>
 
-        {token && <h3 style={styles.welcome}>Welcome, {username}!</h3>}
+        {token && <h3 style={styles.welcome}>Welcome, Admin {username}!</h3>}
 
         <p style={styles.description}>
-          Create, manage, and explore music playlists tailored to your mood.
+          Manage user accounts and discover music!!
         </p>
 
         <nav style={styles.nav}>
           {token ? (
             <>
-              <Link to="/my" style={styles.link}>My Playlists</Link>
-              <Link to="/create-playlist" style={styles.link}>Create Playlist</Link>
+              <Link to="/my" style={styles.link}>Create User</Link>
+              <Link to="/create-playlist" style={styles.link}>Delete User</Link>
               <Link to="/jamendo" style={styles.link}>Discover Music</Link>
             </>
           ) : (
@@ -177,4 +177,4 @@ const styles = {
   },
 };
 
-export default Home;
+export default Admin_Home;

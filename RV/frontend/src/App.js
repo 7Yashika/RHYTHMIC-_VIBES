@@ -29,6 +29,9 @@ import JamendoPlayer from "./pages/JamendoPlayer";
 import MyPlaylists from "./pages/MyPlaylists";
 import CreatePlaylist from "./pages/Playlist";
 import ViewPublicPlaylists from "./pages/ViewPublicPlaylists";
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
+import Admin_Home from './pages/AdminHome'
 function App() {
   return (
     <AuthProvider>
@@ -43,6 +46,10 @@ function App() {
           <Route path="/create-playlist" element={<CreatePlaylist />} />
           <Route path="/my" element={<MyPlaylists />} />
           <Route path="/public-playlists" element={<ViewPublicPlaylists />} />
+          {/* Admin Routes */}
+          <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/home" element={<Admin_Home />} />
         </Routes>
         
       </Router>
